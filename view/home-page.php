@@ -10,12 +10,16 @@
 
 <body>
     <?php
-    session_start();
-    include('../services/check_login.php');
+    include('../services/check-login.php');
     ?>
 
     <h2>Olá, <?php echo $_SESSION['user']; ?></h2>
-    <h2><a href="logout.php">Sair</a></h2>
+    <h2><a href="../controller/logout-controller.php">Sair</a></h2>
+    <hr>
+    <button>Cadastro de navios</button>
+    <button>Descarregar navio</button>
+    <button>Cadastro de caminhões</button>
+    <button>Descarregar caminhão</button>
 </body>
 
 </html>

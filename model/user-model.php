@@ -1,5 +1,6 @@
 <?php
-    class User { 
-        public $name = ''; 
-        public $email = ''; 
-    }
+class User
+{
+    public $name = '';
+    public $email = '';
+}
