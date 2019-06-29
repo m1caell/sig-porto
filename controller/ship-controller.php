@@ -1,6 +1,8 @@
 <?php
 include("../services/connection.php");
 
+session_start();
+
 $parameter = $_POST['parameter'];
 $name = mysqli_real_escape_string($conexao, $_POST['name']);
 $registration = mysqli_real_escape_string($conexao, $_POST['registration']);
@@ -13,7 +15,7 @@ if (empty($_POST['parameter']) || empty($_POST['name']) || empty($_POST['registr
 if ($parameter == "create") {
     $password = md5($password);
 
-    $query = "insert into SHIP(NAME, REGISTRATION) values ('{$name}', '{$registration}');";
+    $query = "insert into SHIP(NAME, REGISTRATION, ID_PERSON) values ('{$name}', '{$registration}', '{$_SESSION['userId']}');";
 
     $result = mysqli_query($conexao, $query);
 

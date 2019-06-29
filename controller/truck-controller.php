@@ -1,6 +1,8 @@
 <?php
 include("../services/connection.php");
 
+session_start();
+
 $parameter = $_POST['parameter'];
 $name = mysqli_real_escape_string($conexao, $_POST['name']);
 $board = mysqli_real_escape_string($conexao, $_POST['board']);
@@ -13,7 +15,7 @@ if (empty($_POST['parameter']) || empty($_POST['name']) || empty($_POST['board']
 if ($parameter == "create") {
     $password = md5($password);
 
-    $query = "insert into TRUCK(NAME, BOARD) values ('{$name}', '{$board}');";
+    $query = "insert into TRUCK(NAME, BOARD, ID_PERSON) values ('{$name}', '{$board}', '{$_SESSION['userId']}');";
 
     $result = mysqli_query($conexao, $query);
 
