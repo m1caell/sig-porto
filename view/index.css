@@ -1,0 +1,28 @@
+.my-main {
+    display: flex;
+    justify-content: center;
+}
+
+.my-sections {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.ordenad-list {
+    padding: 5px;
+}
+
+.ordenad-list > li{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    padding: 10px 0px;
+    min-height: 50px;
+}

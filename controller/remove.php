@@ -27,9 +27,4 @@ if ($type_url === 'ship') {
     $row = mysqli_affected_rows($conexao);
 }
 
-
-
-$row = mysqli_affected_rows($conexao);
-
-
 header('Location: ../view/home-page.php');

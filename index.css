@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+.my-title {
+    margin: 15px;
+}
+
+.image-cards {
+    border-radius: 5px;
+}
+
+.image-cards > img {
+    width: 100%;
+}
